@@ -1,0 +1,66 @@
+// Types
+var myString: string = "Hello World";
+myString = 22 + "";
+
+var myNumber: number = 22;
+
+var myBoll: boolean = true || false;
+
+var myVar: any = "hello";
+myVar = 22 || false;
+
+// Strings
+
+//document.write(myString);
+//document.write(myNumber.toString())
+
+// Arrays
+var arrayAny: any[] = ["","",""];
+arrayAny = [true,2,"3",[],{}];
+
+var arrayString: string[] = ["1","2","3"];
+var arrayNumber: number[] = [1,2,3,4];
+var arrayBoolean: boolean[] = [true, false]
+
+// Tuple
+var strNumTuple: [string, number];
+strNumTuple = ["Hello", 12]; /** !![22, "Hello"] */
+strNumTuple = ["World", 245]
+
+/*
+// void, undefined, null
+let myVoid: void = undefined;
+let myNull: null = null || undefined;
+let myUndefinded: undefined = undefined;
+
+//document.write(typeof(myVoid))
+
+// Functions
+function getSum(num1: number , num2: number): number{
+    return num1 + num2;
+    // getSum():number, return only type number
+}
+
+let mySum = function(
+    num1: number | string,
+    num2: number | string ):number {
+    if(typeof(num1) === "string"){
+        num1 = parseInt(num1);
+    }
+    if(typeof(num2) === "string"){
+        num2 = parseInt(num2);
+    }
+    return num1 + num2;
+}
+
+function getName(
+    firstName: string,
+    lastName?: string):string{
+    // lastName? optional
+    if(lastName == undefined){
+        return firstName;
+    };
+    return `${firstName} ${lastName}`;
+}
+document.write(getName("Joaquin"))
+*/
