@@ -1,2 +1,2 @@
 ## To compile
-- tsc output.js --w (–watch detect changes)
+- tsc output.js `--w` (–watch detect changes)"
