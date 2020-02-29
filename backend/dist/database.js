@@ -4,16 +4,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
-const URI = process.env.MONGODB_URI
-    ? process.env.MONGODB_URI
-    : "mongodb://localhost:27017/";
-const optionsMongo = {
-    dbName: "angular-auth",
+const config_1 = __importDefault(require("./config/config"));
+const dbOptions = {
+    dbName: config_1.default.DB.NAME,
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true
+    useCreateIndex: true,
 };
-mongoose_1.default.connect(URI, optionsMongo);
+mongoose_1.default.connect(config_1.default.DB.URI, dbOptions);
 var connection = mongoose_1.default.connection;
 connection.on('error', console.error.bind(console, ' * Connection error:'));
 connection.once('open', () => {

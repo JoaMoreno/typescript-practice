@@ -1,17 +1,16 @@
-import mongoose from 'mongoose';
+import mongoose ,{ ConnectionOptions } from 'mongoose';
+import config from './config/config';
 
-const URI = process.env.MONGODB_URI 
-    ? process.env.MONGODB_URI 
-    : "mongodb://localhost:27017/";
-
-const optionsMongo = {
-        dbName: "angular-auth",
+const dbOptions: ConnectionOptions = {
+        dbName: config.DB.NAME,
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        useCreateIndex: true
+        useCreateIndex: true,
+        // user: config.DB.USER,
+        // pass: config.DB.PASSWORD
 }
 
-mongoose.connect(URI,optionsMongo);
+mongoose.connect(config.DB.URI,dbOptions);
 
 var connection = mongoose.connection;
 connection.on('error', console.error.bind(console, ' * Connection error:'));
