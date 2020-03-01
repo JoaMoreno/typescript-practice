@@ -10,8 +10,7 @@ This app needs the following environment Variables
 |                |`DB_NAME` 
 |                |`USER`                      
 |                |`PASSWORD`                   
-|JsonWebToken    |`JWT_SECRET`                   |JWT Usage                     |
-|                |`JWT_CONFIG`    
+|JsonWebToken    |`JWT_SECRET`                   |JWT Usage                     |   
 
 ### Requeriments
 - MongoDB
